@@ -336,7 +336,7 @@ endif
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.multihal \
+    android.hardware.sensors-service.oplus-multihal \
     sensors.dynamic_sensor_hal \
     sensors.oplus \
     sensors.fusionlight
@@ -358,6 +358,10 @@ ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml
 endif
+
+# Sensors (wake)
+$(call soong_config_set,oplus_sensors,uses_tap_sensor,true)
+$(call soong_config_set,oplus_sensors,uses_double_tap_sensor,true)
 
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 34
