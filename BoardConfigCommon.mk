@@ -243,5 +243,8 @@ BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 5
 
+# Power
+TARGET_POWER_FEATURE_EXT_LIB := libpowerfeature_ext_oplus
+
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/sm8650-common/BoardConfigVendor.mk

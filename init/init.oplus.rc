@@ -14,6 +14,24 @@ on boot
     # Display
     chmod 0000 /sys/kernel/oplus_display/hbm
 
+    # Allow access for fingerprint HAL touch node
+    chown system system /proc/touchpanel/fingerprint_hal
+    chmod 0660 /proc/touchpanel/fingerprint_hal
+
+    # Allow access for wake gestures
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/double_tap_pressed
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/double_tap_pressed
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/single_tap_pressed
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/single_tap_pressed
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/fp_pressed
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/fp_pressed
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/double_tap_pressed
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/double_tap_pressed
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/single_tap_pressed
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/single_tap_pressed
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/fp_pressed
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/fp_pressed
+
 on post-fs-data
     # ADSP ramdump
     mkdir /data/vendor/mmdump 0777 system system
