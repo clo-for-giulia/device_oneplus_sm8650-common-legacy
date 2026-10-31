@@ -85,6 +85,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.iop@2.0',
         'vendor.qti.hardware.limits@1.0',
         'vendor.qti.hardware.limits@1.1',
+        'vendor.qti.hardware.ListenSoundModel@1.0',
         'vendor.qti.hardware.mwqemadapter@1.0',
         'vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk',
         'vendor.qti.hardware.qxr-V1-ndk',
