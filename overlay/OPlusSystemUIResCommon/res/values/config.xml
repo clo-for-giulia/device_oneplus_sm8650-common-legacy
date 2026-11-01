@@ -9,6 +9,9 @@
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
 
+    <!-- Fastcharge Info Updates -->
+    <bool name="config_alternateFastchargeInfoUpdate">true</bool>
+
     <!-- SystemUI Plugins that can be loaded on user builds. -->
     <string-array name="config_pluginAllowlist" translatable="false">
         <item>com.android.systemui</item>

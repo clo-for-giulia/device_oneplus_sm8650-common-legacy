@@ -137,4 +137,18 @@
 
     <!-- Whether to enable fp unlock when screen turns off on udfps devices -->
     <bool name="config_screen_off_udfps_enabled">true</bool>
+
+    <!-- Whether device has VOOC charging support -->
+    <bool name="config_hasVoocCharger">true</bool>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/fast_charge</string>
+    <string name="config_oemFastChargerStatusPath2" translatable="false">/sys/class/oplus_chg/battery/voocchg_ing</string>
+    <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
+
+    <!-- Paths to fast charging status file: Delimiter ";" -->
+    <string-array name="config_oemFastChargerStatusPaths" translatable="false">
+        <item>/sys/class/oplus_chg/battery/fast_charge;1</item>
+        <item>/sys/class/oplus_chg/battery/voocchg_ing;1</item>
+    </string-array>
 </resources>
